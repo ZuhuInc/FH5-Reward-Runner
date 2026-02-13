@@ -60,9 +60,9 @@ The script uses a transparent overlay that sits on top of your game, providing r
 
 | Step / Mode | Description | Preview |
 | :--: | :--- | :--- |
-| **1. Standby Mode** | **Press [INSERT] to Start**<br/><br/>Launch the script and enter the Wheelspin menu in-game. The overlay will show "Press INSERT to Start" so the bot doesn't click prematurely. | <img width="800" alt="Standby Mode" src="https://i.imgur.com/1POORUq.png" /> |
-| **2. Normal Wheelspin** | **Automated Single Spins**<br/><br/>The script detects the reward reel, identifies the prize value, and automatically handles the "Owned Car" screen to maximize your profit. | <img width="800" alt="Normal Wheelspin" src="https://i.imgur.com/uP2mmdA.png" /> |
-| **3. Super Wheelspin** | **Triple Reel Detection**<br/><br/>Optimized for Super Wheelspins. It scans all three reels simultaneously, tracks the total credit gain, and manages the "Keep/Sell" logic for all rewards. | <img width="800" alt="Super Wheelspin" src="https://i.imgur.com/dNrJNfC.png" /> |
+| **1. Standby Mode** | **Press [INSERT] to Start**<br/><br/>Launch the script and enter the Wheelspin menu in-game. The overlay will show "Press INSERT to Start" so the bot doesn't click prematurely. | <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/f0a99a72-68ac-41fa-ac94-fb65ea606459" /> |
+| **2. Normal Wheelspin** | **Automated Single Spins**<br/><br/>The script detects the reward reel, identifies the prize value, and automatically handles the "Owned Car" screen to maximize your profit. | <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/6376c3ed-1b01-43e2-ac5e-2a9210a3631e" /> |
+| **3. Super Wheelspin** | **Triple Reel Detection**<br/><br/>Optimized for Super Wheelspins. It scans all three reels simultaneously, tracks the total credit gain, and manages the "Keep/Sell" logic for all rewards. | <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/a17a035a-7d5c-41ca-801b-329542dc0bde" /> |
 
 ---
 
