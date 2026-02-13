@@ -1,0 +1,116 @@
+# Zuhu’s FH5 Reward Runner
+
+![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg)
+
+A high-performance automation utility for **Forza Horizon 5** designed to automate the tedious process of spinning Wheelspins and Super Wheelspins. Using OCR (Optical Character Recognition), the script identifies rewards, automatically decides whether to keep rare Forza Edition cars or sell duplicates, and tracks your total session earnings via a sleek, transparent overlay.
+
+---
+
+## Getting Started
+
+> [!NOTE]
+> ### Easiest Method: Download the Executable (.exe)
+> This is the recommended way for most users and **does not require a Python installation.**
+>
+> 1.  Go to the [**Releases Page**](https://github.com/ZuhuInc/Zuhu-FH5-Reward-Runner/releases).
+> 2.  Download the latest `.exe` file from the **Assets** section.
+> 3.  **Important:** You must have [**Tesseract OCR**](https://github.com/UB-Mannheim/tesseract/wiki) installed at `C:\Program Files\Tesseract-OCR\tesseract.exe` for the script to read the screen.
+> 4.  Run the downloaded file and follow the on-screen instructions!
+>
+> [**➡️ Go to the Releases Page to Download**](https://github.com/ZuhuInc/Zuhu-FH5-Reward-Runner/releases)
+
+---
+
+### For Developers: Running from Source
+
+<details>
+<summary>Click here for instructions on running from the Python source code</summary>
+
+#### Prerequisites
+*   **Python 3.8+**
+*   **Tesseract OCR** installed at `C:\Program Files\Tesseract-OCR\tesseract.exe`.
+*   **Forza Horizon 5** running in Windowed or Borderless mode.
+
+#### Installation Steps
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/ZuhuInc/Zuhu-FH5-Reward-Runner
+    cd Zuhu-FH5-Reward-Runner
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    pip install pydirectinput pytesseract keyboard mss Pillow
+    ```
+
+3.  **Run the Script:**
+    ```bash
+    python Reward-Runner.py
+    ```
+
+</details>
+
+---
+
+### Feature Showcase
+
+The script uses a transparent overlay that sits on top of your game, providing real-time data and status updates.
+
+| Step / Mode | Description | Preview |
+| :--: | :--- | :--- |
+| **1. Standby Mode** | **Press [INSERT] to Start**<br/><br/>Launch the script and enter the Wheelspin menu in-game. The overlay will show "Press INSERT to Start" so the bot doesn't click prematurely. | <img width="800" alt="Standby Mode" src="https://i.imgur.com/1POORUq.png" /> |
+| **2. Normal Wheelspin** | **Automated Single Spins**<br/><br/>The script detects the reward reel, identifies the prize value, and automatically handles the "Owned Car" screen to maximize your profit. | <img width="800" alt="Normal Wheelspin" src="https://i.imgur.com/uP2mmdA.png" /> |
+| **3. Super Wheelspin** | **Triple Reel Detection**<br/><br/>Optimized for Super Wheelspins. It scans all three reels simultaneously, tracks the total credit gain, and manages the "Keep/Sell" logic for all rewards. | <img width="800" alt="Super Wheelspin" src="https://i.imgur.com/dNrJNfC.png" /> |
+
+---
+
+### Configuration & Customization
+
+The script creates a local configuration file where you can define your "Keep vs Sell" logic. This allows you to automatically keep cars worth over a certain amount or specifically target Forza Edition (FE) cars.
+
+**Config Path:**  
+`Documents\ZuhuProjects\ZuhuFH5WS\Config.json`
+
+**Example `Config.json`:**
+```json
+{
+    "Keep_FE": true,
+    "Keep_HV": false,
+    "Value_HV": 1000000,
+    "Car_Earned": true,
+    "Credit_Earned": true,
+    "Reel_Scan_Delay": 1.5,
+    "Debug_Mode": false
+}
+```
+
+---
+
+### Script Controls
+
+*   **[INSERT]**: Toggle Start/Pause (The main control).
+*   **[~] (Tilde)**: Hold for 5 seconds to toggle **Debug Mode** (Visualizes detection boxes).
+*   **[CTRL + C]**: Safe exit the script.
+
+---
+
+### Libraries Used
+
+*   **External:** [pydirectinput](https://pypi.org/project/PyDirectInput/), [pytesseract](https://pypi.org/project/pytesseract/), [keyboard](https://pypi.org/project/keyboard/), [mss](https://pypi.org/project/mss/), [Pillow](https://pypi.org/project/Pillow/)
+*   **Standard:** `os`, `sys`, `json`, `tkinter`, `threading`, `time`
+
+---
+
+### ✨ Maintainers
+
+This project is created and maintained by:
+
+*   **[ZuhuInc](https://github.com/ZuhuInc)**
+
+---
+
+### License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
