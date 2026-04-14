@@ -60,9 +60,9 @@ The script uses a transparent overlay that sits on top of your game, providing r
 
 | Step / Mode | Description | Preview |
 | :--: | :--- | :--- |
-| **1. Standby Mode** | **Press [INSERT] to Start**<br/><br/>Launch the script and enter the Wheelspin menu in-game. The overlay will show "Press INSERT to Start" so the bot doesn't click prematurely. | <img width="2560" height="1440" alt="image" src="<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/8a48bb34-c360-4975-acd1-f3b925dce01b" /> |
-| **2. Normal Wheelspin** | **Automated Single Spins**<br/><br/>The script detects the reward reel, identifies the prize value, and automatically handles the "Owned Car" screen to maximize your profit. | <img width="2560" height="1440" alt="image" src="<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/0cf14237-841c-40b9-b4a0-4ae26c99de08" /> |
-| **3. Super Wheelspin** | **Triple Reel Detection**<br/><br/>Optimized for Super Wheelspins. It scans all three reels simultaneously, tracks the total credit gain, and manages the "Keep/Sell" logic for all rewards. | <img width="2560" height="1440" alt="image" src="<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/39f172dc-39a0-44cc-8be5-8d788e69dec7" /> |
+| **1. Standby Mode** | **Press [INSERT] to Start**<br/><br/>Launch the script and enter the Wheelspin menu in-game. The overlay will show "Press INSERT to Start" so the bot doesn't click prematurely. | <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/8a48bb34-c360-4975-acd1-f3b925dce01b" /> |
+| **2. Normal Wheelspin** | **Automated Single Spins**<br/><br/>The script detects the reward reel, identifies the prize value, and automatically handles the "Owned Car" screen to maximize your profit. | <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/0cf14237-841c-40b9-b4a0-4ae26c99de08" /> |
+| **3. Super Wheelspin** | **Triple Reel Detection**<br/><br/>Optimized for Super Wheelspins. It scans all three reels simultaneously, tracks the total credit gain, and manages the "Keep/Sell" logic for all rewards. | <img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/39f172dc-39a0-44cc-8be5-8d788e69dec7" /> |
 
 ---
 
