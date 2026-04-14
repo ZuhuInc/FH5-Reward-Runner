@@ -11,7 +11,7 @@ from mss import mss
 from PIL import Image
 
 # --- CONFIGURATION & PATHS ---
-VERSION = "v1.5.4"
+VERSION = "v1.5.2"
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 DOCS_PATH = os.path.join(os.path.expanduser('~'), 'Documents', 'ZuhuProjects', 'ZuhuFH5WS')
 CONFIG_FILE = os.path.join(DOCS_PATH, 'Config.json')
@@ -57,16 +57,16 @@ def sc(coords):
     return (int(coords[0]*SX), int(coords[1]*SY))
 
 # Coordinates
-REGION_HEADER = sc((1060, 240, 1500, 310))      
-REGION_CAR_NAME = sc((800, 930, 1760, 990))
-REGION_PRICE = sc((1050, 1160, 1500, 1205))
+REGION_HEADER = sc((835, 227, 1724, 320))      
+REGION_CAR_NAME = sc((835, 930, 1725, 975))
+REGION_PRICE = sc((836, 1149, 1724, 1210))
 REGION_BOTTOM_LEFT = sc((95, 1310, 550, 1365))  
 CHECK_PIXEL_X, CHECK_PIXEL_Y = sc((1266, 242))  
 
-REGION_SUPER_L = sc((550, 690, 900, 850))
-REGION_SUPER_M = sc((1150, 690, 1500, 850))
-REGION_SUPER__R = sc((1750, 690, 2100, 850))
-REGION_NORMAL_REEL = sc((1400, 590, 2000, 840))
+REGION_SUPER_L = sc((460, 690, 900, 850))
+REGION_SUPER_M = sc((1060, 690, 1500, 850))
+REGION_SUPER__R = sc((1660, 690, 2100, 850))
+REGION_NORMAL_REEL = sc((1220, 590, 2000, 840))
 
 VALID_PRIZES = [1000, 2000, 4000, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000, 60000, 70000, 80000, 90000, 100000, 125000, 150000, 175000, 200000, 250000, 300000]
 
@@ -160,16 +160,16 @@ class ForzaOverlay:
                                   "ui_element", align="right")
         self.ui.draw_box(rx - 10*SX, 20*SY, "DEBUG", "ON" if self.debug_enabled else "OFF", F_YELLOW, "ui_element", align="right")
 
-        # --- BOTTOM LEFT ---
+        # --- TOP RIGHT (below DEBUG/mode buttons) ---
         if self.car_total + self.cred_total > 0:
-            bx = 20*SX
-            if self.car_total > 0: 
-                lx, lw = self.ui.draw_box(bx, CURR_H - 105*SY, "CAR TOTAL", f"{self.car_total:,}", F_GREEN, "ui_element")
-                bx = lx + lw + 10*SX
-            if self.cred_total > 0: 
-                lx, lw = self.ui.draw_box(bx, CURR_H - 105*SY, "CREDITS TOTAL", f"{self.cred_total:,}", F_GREEN, "ui_element")
-                bx = lx + lw + 10*SX
-            self.ui.draw_box(20*SX, CURR_H - 60*SY, "CR TOTAL", f"{self.car_total + self.cred_total:,}", F_GREEN, "ui_element")
+            ty = 65 * SY
+            if self.car_total > 0:
+                self.ui.draw_box(CURR_W - 20*SX, ty, "CAR TOTAL", f"{self.car_total:,}", F_GREEN, "ui_element", align="right")
+                ty += 45 * SY
+            if self.cred_total > 0:
+                self.ui.draw_box(CURR_W - 20*SX, ty, "CREDITS TOTAL", f"{self.cred_total:,}", F_GREEN, "ui_element", align="right")
+                ty += 45 * SY
+            self.ui.draw_box(CURR_W - 20*SX, ty, "CR TOTAL", f"{self.car_total + self.cred_total:,}", F_GREEN, "ui_element", align="right")
 
         self.canvas.create_text(CURR_W-20*SX, CURR_H-20*SY, text="Controls: [INSERT] Start | Hold [~] 5s Debug | [CTRL+C] Exit", font=self.ui.f_sm, fill=F_PINK, anchor="se", tags="ui_element")
         
